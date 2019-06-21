@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+        <title>WebLeertaak</title>
+
+    <!-- See https://goo.gl/OOhYW5 -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="boven-navbar"></div>
+        <div class="navbar">
+            <ul>
+                <li><a href="homepagina.html">Home</a></li>
+                <li><a href="profielpagina.html">Profiel</a></li>
+                <li><a class="deze-pagina" href="voortgangpagina.html">Voortgang</a></li>
+            </ul>
+        </div>
+        <div class="naast-navbar"></div>
+        <div class="navbar-onder">
+        </div>
+        <div class="tekst-container">
+            <h1 class="sans">Voortgang</h1>
+            <div style="float:left">
+                <table style="border: 1px solid black" class="sans" id="voortgangsPunten">
+                <tr>
+                    <th class="table-style"><p style="margin:5px;">Vakcode</p></th>
+                    <th class="table-style"><p style="margin:5px;">ECTS</p></th>
+                    <th class="table-style"><p style="margin:5px;">Datum behaald</p></th>
+                </tr>
+                <tr>
+                    <td><input type="text" class="td-height"></td>
+                    <td><input type="number" class="td-ects" name="EC"></td>
+                    <td><input type="date" class="td-height" name="datum"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="td-height"></td>
+                    <td><input type="number" class="td-ects" name="EC"></td>
+                    <td><input type="date" class="td-height" name="datum"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="td-height"></td>
+                    <td><input type="number" class="td-ects" name="EC"></td>
+                    <td><input type="date" class="td-height" name="datum"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="td-height"></td>
+                    <td><input type="number" class="td-ects" name="EC"></td>
+                    <td><input type="date" class="td-height" name="datum"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="td-height"></td>
+                    <td><input type="number" class="td-ects" name="EC"></td>
+                    <td><input type="date" class="td-height" name="datum"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="td-height"></td>
+                    <td><input type="number" class="td-ects" name="EC"></td>
+                    <td><input type="date" class="td-height" name="datum"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="td-height"></td>
+                    <td><input type="number" class="td-ects" name="EC"></td>
+                    <td><input type="date" class="td-height" name="datum"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="td-height"></td>
+                    <td><input type="number" class="td-ects" name="EC"></td>
+                    <td><input type="date" class="td-height" name="datum"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="td-height"></td>
+                    <td><input type="number" class="td-ects" name="EC"></td>
+                    <td><input type="date" class="td-height" name="datum"></td>
+                </tr>
+                </table>
+            </div>
+            <script>
+                function bereken(tabel){
+                    var punten = document.getElementsByName('EC');
+                    var datums = document.getElementsByName('datum');
+                    var data = [];
+                    var totaalPunten = 0;
+                    var aantalKeerPuntenGekregen = 0;
+                    for (var i = 0; i < punten.length; i++){
+                        var punt = parseInt(punten[i].value);
+                        var datum = new Date(datums[i].value);
+                        if(punt > 1 && datum != undefined){
+                            totaalPunten = totaalPunten + punt;
+                            aantalKeerPuntenGekregen++;
+                            data.push(datum);
+                        }
+                    }
+                    var datumVerschil = Math.abs(data[0].getMonth() - data[(data.length-1)].getMonth());
+                    var maandenTotP = (datumVerschil/aantalKeerPuntenGekregen)*12;
+                    window.alert("Je hebt al " + totaalPunten + " punten gehaald en zal er nog " + maandenTotP + " maanden over doen")
+                }
+            </script>
+            <button class="button-studietempo" onclick="bereken()">Bereken Studietempo</button>
+            <div class="voortgang-rechts">
+            <p class="sans">Student:   Robert-Jan Vrieling<br>
+               Telefoon:  0123456789<br>
+               E-mail:    robert-jan.vrieling@student.hu.nl</p>
+               <br><br>
+                <div style="width:220px">
+                    <img src="kaart.PNG">
+                    <br><br><br>
+                    <img src="grafiek.PNG">
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="bottom-bar">
+            <p class="bottom-bar-tekst-links">Auteur: Robert-Jan Vrieling</p>
+            <p class="bottom-bar-tekst-midden">Deze opdracht is gemaakt in het kader van het vak Analyse & User Interfaces</p>
+            <p class="bottom-bar-tekst-rechts">Datum: 17/02/2019</p>
+        </div>
+    </body>
+</html>

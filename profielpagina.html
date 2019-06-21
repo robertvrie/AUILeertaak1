@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+        <title>WebLeertaak</title>
+
+    <!-- See https://goo.gl/OOhYW5 -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="boven-navbar"></div>
+        <div class="navbar">
+            <ul>
+                <li><a href="homepagina.html">Home</a></li>
+                <li><a class="deze-pagina" href="profielpagina.html">Profiel</a></li>
+                <li><a href="voortgangpagina.html">Voortgang</a></li>
+            </ul>
+        </div>
+        <div class="naast-navbar"></div>
+        <div class="navbar-onder">
+        </div>
+        <div class="tekst-container" style="width:45%">
+            <h1 class="sans">Profiel</h1><br><br>
+            <form>
+                <div class="profiel-input">
+                    <label>Voornaam:</label> <input type="text" style="input-box">
+                </div>
+                <div class="profiel-input">
+                    <label>Achternaam:</label><input type="text" style="input-box">
+                </div>
+                <div class="profiel-input">
+                    <label>Adres:</label><input type="text" style="input-box">
+                </div>
+                <div class="profiel-input">
+                    <label>E-mail:</label><input type="email" style="input-box">
+                </div>
+                <div class="profiel-input">
+                    <label>Telefoonnr:</label><input type="text" style="input-box">
+                </div>
+                <div class="profiel-input">
+                    <label>Geslacht:</label>
+                        <input type="radio" style="width:20px" name="geslacht"> Man<br> 
+                        <input type="radio" style="width:20px; float:left" name="geslacht"> Vrouw
+                </div>
+                <div class="profiel-input">
+                    <label>Geboortedatum:</label><input type="date" style="input-box">
+                </div>
+            </form>
+        </div>
+        <div class="tekst-container" style="width:45%">
+            <h1 class="sans"> </h1>
+            <form>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="profiel-input">
+                    <label>Studentennr:</label> <input type="number" style="input-box">
+                </div>
+                <div class="profiel-input">
+                    <label>Klas:</label>
+                    <select>
+                        <option>V1A</option>
+                        <option>V1B</option>
+                        <option>V1C</option>
+                        <option>V1D</option>
+                        <option>V1E</option>
+                        <option>V1F</option>
+                        <option>V1G</option>
+                        <option>V1H</option>
+                        <option>V1I</option>
+                        <option>V1J</option>
+                    </select>
+                </div>
+                <div class="profiel-input">
+                    <label>Gekozen studierichting:</label>
+                    <input type="radio" class="profiel-radio" name="richting">SNE<br>
+                    <input type="radio" class="profiel-radio" name="richting">BIM<br>
+                    <input type="radio" class="profiel-radio" name="richting">SIE<br>
+                    <input type="radio" class="profiel-radio" name="richting">TI<br>                    
+                </div>
+                <div class="profiel-input">
+                    <label>Foto:</label><img src="profielfoto.PNG" style="clear: both; ">
+                    <div class="profiel-button-div"><button class="profielButton">Change</button></div>
+                </div>
+                
+                
+            </form>
+        </div>
+        <div class="bottom-bar">
+            <p class="bottom-bar-tekst-links">Auteur: Robert-Jan Vrieling</p>
+            <p class="bottom-bar-tekst-midden">Deze opdracht is gemaakt in het kader van het vak Analyse & User Interfaces</p>
+            <p class="bottom-bar-tekst-rechts">Datum: 17/02/2019</p>
+        </div>
+    </body>
+</html>
